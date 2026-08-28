@@ -14,7 +14,7 @@ export default function Director() {
     <section className="director section-pad" id="about-us">
       <div className="director-photo">
         <img
-          src="/src/assets/director/director.jpg"
+          src="/src/assets/director/director.jpeg"
           alt="Director of IG Academy"
         />
       </div>

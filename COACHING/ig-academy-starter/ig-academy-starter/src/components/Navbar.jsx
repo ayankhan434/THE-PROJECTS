@@ -20,8 +20,8 @@ export default function Navbar() {
       <a className="brand" href="#home" onClick={() => setOpen(false)}>
         <span className="brand-mark">★</span>
         <span>
-          <strong>IG ACADEMY</strong>
-          <small>DEFENCE COACHING</small>
+          <strong>SVC</strong>
+          <small>Shree Vijaya Classes</small>
         </span>
       </a>
 
