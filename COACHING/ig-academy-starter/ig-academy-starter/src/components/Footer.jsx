@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-brand">
-        <strong>★ IG ACADEMY</strong>
+        <strong>Shree vijaya classes</strong>
         <small>DEFENCE COACHING</small>
         <p>
           India's most trusted institute for defence & government exam
