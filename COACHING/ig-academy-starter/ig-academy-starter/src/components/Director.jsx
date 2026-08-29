@@ -1,5 +1,7 @@
-import react from "react";
+import React from "react";
 import { CheckCircle2, Quote } from "lucide-react";
+
+import directorImage from "../assets/director/director.jpeg";
 
 const points = [
   "M.Sc. (Mathematics)",
@@ -13,14 +15,14 @@ export default function Director() {
   return (
     <section className="director section-pad" id="about-us">
       <div className="director-photo">
-        <img
-          src="/src/assets/director/director.jpeg"
-          alt="Director of IG Academy"
-        />
+        <img src={directorImage} alt="Director of IG Academy" />
       </div>
+
       <div className="director-details">
         <span className="eyebrow">DIRECTOR, IG ACADEMY</span>
+
         <h2>Mr. Indrajeet Singh</h2>
+
         <ul>
           {points.map((p) => (
             <li key={p}>
@@ -29,12 +31,15 @@ export default function Director() {
           ))}
         </ul>
       </div>
+
       <blockquote>
         <Quote />
+
         <p>
           Our mission is not just to prepare students for examination, but to
           prepare them for the responsibility that comes with the uniform.
         </p>
+
         <cite>Indrajeet Singh</cite>
       </blockquote>
     </section>

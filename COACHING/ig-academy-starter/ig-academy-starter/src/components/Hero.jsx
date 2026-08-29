@@ -1,4 +1,3 @@
-```jsx
 import React from "react";
 import { ArrowRight, Star } from "lucide-react";
 
@@ -29,8 +28,7 @@ export default function Hero() {
         </h1>
 
         <p>
-          India's trusted destination for Defence & Government Exam
-          preparation.
+          India's trusted destination for Defence & Government Exam preparation.
         </p>
 
         <div className="hero-actions">
@@ -60,10 +58,7 @@ export default function Hero() {
 
       <div className="hero-visual">
         <div className="hero-main-image">
-          <img
-            src={heroMain}
-            alt="IG Academy defence training"
-          />
+          <img src={heroMain} alt="IG Academy defence training" />
         </div>
 
         <div className="hero-grid">
@@ -78,4 +73,3 @@ export default function Hero() {
     </section>
   );
 }
-```;
