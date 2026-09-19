@@ -1,13 +1,17 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+@use "./style/button.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-html,body,
-#root
-{
-width:100%;
-background-color: #dd5e5e92;
-color:whitesmoke;
-font-family:Georgia, 'Times New Roman', Times, serif;
+
+html,
+body,
+#root {
+    width: 100%;
+    background-color: #66bc7a92;
+    color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

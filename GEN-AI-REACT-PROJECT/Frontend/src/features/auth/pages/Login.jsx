@@ -1,13 +1,17 @@
 import React from "react";
+import "../auth.form.scss";
 
-function Login() {
+const Login = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <main>
       <div className="form-container">
         <h1>Login</h1>
-        <h2>karo</h2>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label htmlFor="email">Email</label>
             <input
@@ -28,10 +32,9 @@ function Login() {
           </div>
           <button className="button primary-button">Login</button>
         </form>
-        <h1>hii</h1>
       </div>
     </main>
   );
-}
+};
 
 export default Login;
