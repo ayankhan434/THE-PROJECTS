@@ -1,5 +1,5 @@
 import React from "react";
-import {useNavigate} from 'react-router'
+import {useNavigate,Link} from 'react-router'
 
 const Register = () => {
   const handleSubmit = (e) => {
@@ -41,7 +41,13 @@ const Register = () => {
           </div>
           <button className="button primary-button">Register</button>
         </form>
+
+        <p>Allready have an account ? <Link to={"/login"}>Login</Link></p>
+
+
       </div>
+
+
     </main>
   );
 };
