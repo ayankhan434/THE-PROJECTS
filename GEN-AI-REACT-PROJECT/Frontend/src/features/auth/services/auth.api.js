@@ -1,61 +1,76 @@
 
- 
- import axios from "axios"
+import axios from "axios";
 
+const api = axios.create({
+  baseURL: "http://localhost:3000",
+  withCredentials: true,
+});
 
- const api =axios.create({
-    baseURL:"https://localhost:3000",
-    withCredentials:true
- })
+// REGISTER
+export async function register({ username, email, password }) {
+  try {
+    const response = await api.post("/api/auth/register", {
+      username,
+      email,
+      password,
+    });
 
- export async function register({username, email, password}){
-    try{
-        const response = await api.post('https://localhost:3000/api/auth/register',)
+    return response.data;
+  } catch (err) {
+    console.error(
+      "Register error:",
+      err.response?.data || err.message
+    );
 
-        return response.data
-    }catch (err){
-        console.log(err);
-        
-    }
- }
+    throw err;
+  }
+}
 
+// LOGIN
+export async function login({ email, password }) {
+  try {
+    const response = await api.post("/api/auth/login", {
+      email,
+      password,
+    });
 
- export async function login({email,password}){
-    try{
-        const response= await api.post('https://localhost:3000/api/auth/login')
+    return response.data;
+  } catch (err) {
+    console.error(
+      "Login error:",
+      err.response?.data || err.message
+    );
 
-        return response.data
-    }catch(err){
-        console.log(err);
-        
-    }
- }
+    throw err;
+  }
+}
 
+// LOGOUT
+export async function logout() {
+  try {
+    const response = await api.get("/api/auth/logout");
+    return response.data;
+  } catch (err) {
+    console.error(
+      "Logout error:",
+      err.response?.data || err.message
+    );
 
- export async function logout(){
-    try {
-        const response = await api.get("https://localhost:3000/api/auth/logout")
-        return response.data
-    } catch (error) {
-        console.log(err);
-        
-    }
+    throw err;
+  }
+}
 
+// GET CURRENT USER
+export async function getMe() {
+  try {
+    const response = await api.get("/api/auth/get-me");
+    return response.data;
+  } catch (err) {
+    console.error(
+      "Get user error:",
+      err.response?.data || err.message
+    );
 
-
- }
-
-
- export async function getMe(){
-    try {
-        const response = await api.get("https://localhost:3000/api/auth/get-me")
-        return response.data
-    } catch (error) {
-        console.log(err);
-        
-    }
-
-
-
- }
-
+    throw err;
+  }
+}
